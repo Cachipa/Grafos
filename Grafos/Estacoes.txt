@@ -1,7 +1,7 @@
-Estacao1 12.0 14.0
-Estacao2 12.0 27.0
-Estacao3 34.0 43.0
-Estacao4 50.0 43.0
-Estacao5 60.0 58.0
-Estacao6 64.0 86.0
-Estacao7 100.0 14.0
+Estacao1 12 14
+Estacao2 12 27
+Estacao3 34 43
+Estacao4 50 43
+Estacao5 60 58
+Estacao6 64 86
+Estacao7 100 14
