@@ -1,7 +1,7 @@
-Estacao1 12 14
-Estacao2 12 27
-Estacao3 34 43
-Estacao4 50 43
-Estacao5 60 58
-Estacao6 64 86
-Estacao7 100 14
+Estacao1 12 14 blue
+Estacao2 12 27 green
+Estacao3 34 43 red
+Estacao4 50 43 green
+Estacao5 60 58 red
+Estacao6 64 86 green
+Estacao7 100 14 red
