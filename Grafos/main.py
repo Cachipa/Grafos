@@ -1,5 +1,7 @@
 import networkx as nx
 from matplotlib import pyplot as plt
+import tkinter as tk
+from PIL import Image, ImageTk
 
 with open(r"Estacoes.txt", 'r') as fp:  # Conta numero de linhas no arquivo
     n = len(fp.readlines())
@@ -25,14 +27,12 @@ for i in range(n):  # Le o arquivo com as estações e coordenadas, e armazena e
 x = [int(i) for i in x]
 y = [int(i) for i in y]
 
-nomes = {}
+
 etc = list(range(1, n + 1))
 
-for j in range(n):
-    nomes[etc[j]] = nome[j]  # associa nome da estação com aresta
 
 for i in range(n):
-    g.add_node(etc[i], pos=(x[i], y[i]), nodecolor=ndcor[i])  # cria aresta e suas cordenadas
+    g.add_node(etc[i], pos=(x[i], y[i]), nodecolor=ndcor[i], nomes=nome[i])  # cria aresta e suas cordenadas
 
 with open(r"Conexoes", 'r') as fp2:  # Conta numero de linhas no arquivo
     p = len(fp2.readlines())
@@ -64,10 +64,27 @@ for k in range(p):
 
         g.add_edge(etc[temp], etc[temp2], color =cor)
 
+p = (nx.shortest_path(g, source=4, target=5))
+h = nx.subgraph(g, p)
+print(h.edges())
 
-edges = g.edges()
+node_label_options = {"font_size": 10,
+                      "verticalalignment": "bottom",
+                      "horizontalalignment": "left"}
+
 colors = nx.get_edge_attributes(g, 'color').values()
+nomes2 = nx.get_node_attributes(g, 'nomes')
 ndcolor = nx.get_node_attributes(g, 'nodecolor').values()
 pos = nx.get_node_attributes(g, 'pos')
-nx.draw(g, pos, labels=nomes, with_labels=True, edge_color=colors, node_color=ndcolor)
-plt.show()
+nx.draw(g, pos, labels=nomes2, with_labels=True, edge_color=colors, node_color=ndcolor, **node_label_options)
+plt.savefig("grafo.png")
+
+#Interface Gráfica
+root = tk.Tk()
+root.title("ola")
+root.configure(bg='black')
+photo = tk.PhotoImage(file="grafo.png")
+label = tk.Label(root, text="Grafo", bg="black", fg="white").grid(row=1, column=0)
+label1 = tk.Label(root,bg="black", fg="white").grid(row=0, column=0)
+label2 = tk.Label(root, image=photo).grid(row=1, column=1)
+root.mainloop()
