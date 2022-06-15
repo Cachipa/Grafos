@@ -64,20 +64,28 @@ for k in range(p):
 
         g.add_edge(etc[temp], etc[temp2], color =cor)
 
-p = (nx.shortest_path(g, source=4, target=5))
-h = nx.subgraph(g, p)
-print(h.edges())
-
 node_label_options = {"font_size": 10,
-                      "verticalalignment": "bottom",
-                      "horizontalalignment": "left"}
+                      "verticalalignment": "bottom"}
+
+node_options = {"node_size": 35}
+
+edge_options = {"width": 1.5}
 
 colors = nx.get_edge_attributes(g, 'color').values()
 nomes2 = nx.get_node_attributes(g, 'nomes')
 ndcolor = nx.get_node_attributes(g, 'nodecolor').values()
 pos = nx.get_node_attributes(g, 'pos')
-nx.draw(g, pos, labels=nomes2, with_labels=True, edge_color=colors, node_color=ndcolor, **node_label_options)
+print(type(pos))
+nx.draw(g, pos, labels=nomes2, with_labels=True, edge_color=colors, node_color=ndcolor, **node_label_options, **node_options, **edge_options)
 plt.savefig("grafo.png")
+
+p = list(nx.all_simple_paths(g, source=4, target=6))
+h = nx.subgraph(g, p[0])
+e = list(h.edges)
+print(e[1])
+print(g.edges[e[1]]['color'])
+print(g.nodes)
+
 
 #Interface Gráfica
 root = tk.Tk()
