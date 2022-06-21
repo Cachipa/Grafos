@@ -1,8 +1,55 @@
-Linha1 green 2
-Estacao1 Estacao2
-Estacao3 Estacao5
-Linha1 blue 4
-Estacao3 Estacao4
-Estacao5 Estacao6
-Estacao7 Estacao4
-Estacao7 Estacao6
+Linha1,gold,7
+La Defense,Charles de Gaulle Etoile,
+Charles de Gaulle Etoile,Champs elysees,
+Champs elysees,Concorde,
+Concorde,Chatelet,
+Chatelet,Bastille,
+Bastille,Gare de Lyon,
+Gare de Lyon,Nation,
+Linha2,blue,9
+Porte Dauphine,Charles de Gaulle Etoile,
+Charles de Gaulle Etoile,Villiers,
+Villiers,Place de Clichy,
+Place de Clichy,Barbes Rochechouart,
+Barbes Rochechouart,Stalingrad,
+Stalingrad,Jaures,
+Jaures,Bellevile,
+Bellevile,Pere Lachzise,
+Pere Lachzise,Nation,
+Linha3,goldenrod,6
+Villiers,Saint-Lazare,
+Saint-Lazare,Opera,
+Opera,Reaumur Sebastopol,
+Reaumur Sebastopol,Arts et Metiers,
+Arts et Metiers,Republique,
+Republique,Gambetta,
+Linha4,deeppink,9
+Marcadet Poissononniers,Barbes Rochechouart,
+Barbes Rochechouart,Gare du Nord,
+Gare du Nord,Gare de L'est,
+Gare de L'est,Strasbourg Saint-Denis,
+Strasbourg Saint-Denis,Reaumur Sebastopol,
+Reaumur Sebastopol,Chatelet,
+Chatelet,Odeon,
+Odeon,Gare Montparnasse,
+Gare Montparnasse,Raspail,
+Linha6,green,7
+Charles de Gaulle Etoile,Trocadero,
+Trocadero,La Motte Picquet,
+La Motte Picquet,Pasteur,
+Pasteur,Gare Montparnasse,
+Raspail,Place d'Italie,
+Place d'Italie,Bercy,
+Bercy,Nation,
+Linha11,brown,4
+Porte des Lilas,Bellevile,
+Bellevile,Republique,
+Arts et Metiers,Hotel de Ville,
+Hotel de Ville,Chatelet,
+Linha13,lightskyblue,6
+Place de Clichy,Saint-Lazare,
+Saint-Lazare,Miromesnil,
+Miromesnil,Champs elysees,
+Champs elysees,Duroc,
+Duroc,Gare Montparnasse,
+Gare Montparnasse,Chatillion-Montrouge,
